@@ -54,7 +54,8 @@ const handleSubmit = event => {
   const {
     elements: { email, message },
   } = event.currentTarget;
-  event.currentTarget.reset();
+  console.log({ email: email.value, message: message.value });
   remove(LOCAL_STORAGE_KEY);
+  event.currentTarget.reset();
 };
 formRef.addEventListener('submit', handleSubmit);
