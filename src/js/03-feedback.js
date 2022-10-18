@@ -54,6 +54,9 @@ const handleSubmit = event => {
   const {
     elements: { email, message },
   } = event.currentTarget;
+  if (email.value === '' || message.value === '') {
+    return alert('Please fill in all the fields!');
+  }
   console.log({ email: email.value, message: message.value });
   remove(LOCAL_STORAGE_KEY);
   event.currentTarget.reset();
