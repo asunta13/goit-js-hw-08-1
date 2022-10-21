@@ -50,7 +50,7 @@ function initPage() {
   });
 }
 const handleSubmit = event => {
-  event.preventDefault;
+  event.preventDefault();
   const {
     elements: { email, message },
   } = event.currentTarget;
